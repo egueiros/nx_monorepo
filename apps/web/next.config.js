@@ -12,6 +12,32 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  experimental: {
+    forceSwcTransforms: true,
+  },
+  transpilePackages: [
+    'react-native',
+    `react-native-web`,
+    `react-native-vector-icons`,
+    `react-native-safe-area-context`,
+    `react-native-svg`,
+  ],
+  webpack: config => {
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      'react-native$': require.resolve(`react-native-web`),
+    }
+    config.resolve.extensions = [
+      `.web.js`,
+      `.web.jsx`,
+      `.web.ts`,
+      `.web.tsx`,
+      ...config.resolve.extensions,
+    ]
+    config.resolve.fallback = { fs: false }
+    return config
+  }
+
 };
 
 const plugins = [
