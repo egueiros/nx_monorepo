@@ -8,16 +8,19 @@ import {
   Text,
   StatusBar,
   TouchableOpacity,
-  Linking, Alert,
+  Linking,
 } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
-import { isWeb } from "@workspace/utils";
-import { Button } from "@workspace/design";
+import { isWeb } from '@workspace/utils';
+import { Button } from '@workspace/design';
+import { styled } from 'nativewind';
 
 export const Home = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
   const scrollViewRef = useRef<null | ScrollView>(null);
+
+  const StyledView = styled(View);
 
   return (
     <>
@@ -30,12 +33,12 @@ export const Home = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
         >
-          <View style={styles.section}>
+          <StyledView className={`bg-red-500 mt-4 ml-4`}>
             <Text style={styles.textLg}>Hello there,</Text>
             <Text style={[styles.textXL, styles.appTitleText]} testID="heading">
               Welcome {isWeb ? 'Web' : 'Mobile'} 👋
             </Text>
-          </View>
+          </StyledView>
           <View style={styles.section}>
             <View style={styles.hero}>
               <View style={styles.heroTitle}>
@@ -57,7 +60,14 @@ export const Home = () => {
                   You're up and running
                 </Text>
               </View>
-              <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 24,}}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  marginTop: 24,
+                }}
+              >
                 <TouchableOpacity
                   style={styles.whatsNextButton}
                   onPress={() => {
@@ -71,7 +81,10 @@ export const Home = () => {
                     What's next?
                   </Text>
                 </TouchableOpacity>
-                <Button title={'Shared Button'} onPress={() => alert('shared button pressed')} />
+                <Button
+                  title={'Shared Button'}
+                  onPress={() => alert('shared button pressed')}
+                />
               </View>
             </View>
           </View>

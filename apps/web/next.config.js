@@ -21,6 +21,7 @@ const nextConfig = {
     `react-native-vector-icons`,
     `react-native-safe-area-context`,
     `react-native-svg`,
+    `nativewind`,
   ],
   webpack: config => {
     config.resolve.alias = {

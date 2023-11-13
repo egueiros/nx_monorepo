@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import App, {AppContext, AppProps} from "next/app";
 
+import './styles.css';
+
 function WebApp({ Component, pageProps }: AppProps) {
   return (
     <>
