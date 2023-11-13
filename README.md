@@ -2,18 +2,18 @@
 
 <a alt="Nx logo" href="https://reactnative.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a> 👋 <a alt="RN logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://reactnative.dev/img/header_logo.svg" width="40"></a> 🙌 <a alt="RN logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/2560px-Nextjs-logo.svg.png" height="25"></a> 👌
 
-✨ **This us a boilerplate workspace that uses [Nx](https://nx.dev) and includes a [React Native](https://reactnative.dev) and a [Next.js](https://nextjs.org) that has been setup to be used with [RN Web](https://necolas.github.io/react-native-web)**   ✨
+✨ **This is a boilerplate workspace that uses [Nx](https://nx.dev) and includes a [React Native](https://reactnative.dev) and a [Next.js](https://nextjs.org) that has been setup to be used with [RN Web](https://necolas.github.io/react-native-web)**   ✨
 
-This repo is meant to be instructional as well, therefore the work has been broken down in branches so you can see incremental updates.
+This repo is meant to be instructional, therefore the work has been broken down in branches so you can see incremental updates.
 
 ## Branches
 
-Checkout the `step3` branch for the final result.
+Checkout the `step4` branch for the final result.
 
  - The `main` branch is the starting point. It contains both apps but they don't share any resource.
  - The `step2` branch contains the work done for RN Web to work in the Next.js app.
  - The `step3` branch contains a *home feature* and a *button component* in a shared library used by both apps.
-
+ - The `step4` branch contains a *Tailwind/Nativewind* implementation that works across web and mobile.
 
 ## Start the app
 
